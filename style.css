@@ -3,17 +3,35 @@
     margin: 0;
     font-family: sans-serif;
     color: white;
+    display: grid;
+    grid-template-areas: 
+    "list-left list-center list-right";
+   
   }
   
   #item-1 {
+    grid-area: list-center;  
     background-color: steelblue;
   }
   
   #item-2 {
+    grid-area: list-left;
     background-color: #fe7e02;
   }
   
   #item-3 {
+    grid-area: list-right;  
     background-color: #45525b;
   }
   
+  @media screen and (min-device-width: 1200px) {
+    main{
+      display: grid;
+    grid-template-columns: 200px 800px 200px;
+    grid-template-rows: 1;
+    padding: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+    height: 700px;
+    }    
+  }
